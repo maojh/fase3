@@ -76,7 +76,7 @@
 .navbar a {
     float: right;
     display: block;
-    color: #000;
+    color: #9b9b9b;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -93,7 +93,7 @@
 /* Margin*/
 
 #UBItitle {   
-    margin-top: 32%;
+    margin-top: 33%;
 }
 
 #UBIsubtitle {
@@ -103,5 +103,14 @@
 
 #UBIsmall {
     
+    margin-top: 5%;
+}
+
+#BIQuote {
+    
     margin-top: 10%;
+}
+
+#IMG4col {
+    width: 100%;
 }
