@@ -5,28 +5,44 @@
   <title>UBI3</title>
     <link rel="stylesheet" href="css/simple-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/masonry.css">
+
+    <script src="js/addons/p5.min.js"></script>
+    <script src="js/addons/p5.dom.min.js"></script>
 </head>
 <body>
 
 
-<div class="main"> 
- <div id="1.0_BasicIncome"class="container">            
+    <div class="navbar row">
+        <a href="#BasicIncome">BASIC INCOME</a>
+        <a href="#Exp1">EXPERIMENT 1</a>
+        <a href="#Exp2">EXPERIMENT 2</a>
+        <a href="#Exib">EXIBITION</a>
+        <a href="#SeeAlso">SEE ALSO</a>
+    </div>
+
+
+<div class="main">
+ <div class="container">
         <div class="row" id="UBItitle">
-            <p class="TITLE col-8" >BASIC INCOME</p>         
+            <a class="TITLE col-8" >BASIC INCOME</a>
+
    </div>
     <div class="row SubBlack" id="UBIsubtitle">
         <div>A matter of <span class="Gold">money</span>, <span class="Gold">time</span><br>and <span class="Gold">choices</span>.
      </div>
     <div class="row" id="UBIsmall">
         <div class="col-4">
+
         <p class="SmallTextHome">Can you imagine all your future possibilities? Scroll to participate in the experiment.</p> 
+
         </div>
          <p class="col-5"></p>
         <div class="col-3">
          <p class="SmallTextHome">Or click here to learn more<br>about UBI pilots around the world.</p> </div>
-   </div>  
+       </div>  
      
+
     </div>
  </div>
  <div id=2.0_Experiment1 class="container">
@@ -36,41 +52,106 @@
                 <p class="col-7 Quote">A basic income is <br>a periodic cash payment unconditionally delivered to all on an individual basis, without means-test or work requirement.<br><br>
                         (basicincome.org)</p>
             </div>
-     
-            
- </div>
+
+  </div>
+     <!-- first interactive experiment results -->
     <div id=2.0_Experiment1_Results class="container">
-            <div class="row"> 
-        <!-- first interactive experiment results --> 
+            <div class="row">
+              <div class="col-7">
+                <h3>
+                  Imagine that you had <span class="subGold">500€ guaranteed</span> each month, <br>
+                  what would you do?
+                </h3>
+              </div>
+              <div class="col-2">
+                <!-- spacing -->
+              </div>
+              <div class="col-3">
+                <h5>
+                  It doesn’t matter if you work or if you’re unemployed, if you are healthy or if you have any disabilities, you’re going to get it anyway.
+                  <br>
+                  How would you spend it?
+                </h5>
+              </div>
+            </div>
+            <div class="row">
+              <div id="exp1">
+                <!-- P5 canvas from exp1.js-->
+              </div>
             </div>
      </div>
+     <!-- second interactive experiment -->
     <div id=3.0_Experiment2 class="container">
-            <div class="row"> 
-        <!-- second interactive experiment --> 
+            <div class="row">
+              <div class="col-4">
+                <h3>
+                  “If only I had <span class="subGold">12 hours more</span>…” <br>
+                  but what will you really do?
+                </h3>
+              </div>
+              <div class="col-4">
+                <!-- spacing -->
+              </div>
+              <div class="col-4">
+                <h5>
+                  You could relax at home, go climbing, learn how to cook or simply work more than before. You could use it
+                  just for one task or split it into different activities, it’s your choice.
+                </h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <p>
+                  Imagine that you could save 12 working hours a week. How would you spend your time?
+                </p>
+                <h5>
+                  Write your answer here:
+                </h5>
+                <div class="input">
+                  <textarea name="name" rows="4" cols="" id="textField"></textarea>
+                  <br>
+                  <button type="button" id="submit" onclick="addPost()">Post</button>
+                  <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="masonWrapper">
+                  <div class="masonry">
+                    <!-- thank you w3bits.com for the css masonry idea -->
+                    <div class="item">
+                      In publishing and graphic design, lorem ipsum is a filler text or greeking.
+                    </div>
+                    <div class="item">
+                      It is commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text.
+                    </div>
+                    <div class="item">
+                      In publishing and graphic design, lorem ipsum is a filler text or greeking.
+                      Placeholder text allows designers to design the form of the content before the content itself has been produced.
+                    </div>
+                    <div class="item">
+                      Placeholder text allows designers to design the form of the content before the content itself has been produced.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
      </div>
     <div id=3.0_Experiment2_Results class="container">
-            <div class="row"> 
-        <!-- second interactive experiment results --> 
+            <div class="row">
+        <!-- second interactive experiment results -->
             </div>
      </div>
      <div id=Exhibition class="container">
-            <div class="row"> 
-        <!-- Info about our exhibition --> 
+            <div class="row">
+        <!-- Info about our exhibition -->
             </div>
      </div>
     <div id=SeeAlso class="container">
-            <div class="row"> 
-       <!-- link to our other works -->  
+            <div class="row">
+       <!-- link to our other works -->
             </div>
-     </div>
-    
-    
-  
+     </div>    
  </div>
-
-    
-
 
     <div class="navbar row">
         <a href="#BasicIncome">BASIC INCOME</a>
@@ -86,33 +167,8 @@
       var prevPosts = {}
   </script>
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC1lDhoDahvtIcCKZeVuDyCbC8d3rUIkzA",
-    authDomain: "ubi3-8c834.firebaseapp.com",
-    databaseURL: "https://ubi3-8c834.firebaseio.com",
-    projectId: "ubi3-8c834",
-    storageBucket: "ubi3-8c834.appspot.com",
-    messagingSenderId: "1098998582605"
-  };
-  firebase.initializeApp(config);
-
-  var database = firebase.database()
-  var ref = database.ref('scores/')
-  var data = {
-    "user": "matteo",
-    "score": "3"
-  }
-  ref.push(data, pushResult)
-
-  function pushResult(error) {
-    if(error) {
-      console.log('nay');
-    } else {
-      console.log('got it');
-    }
-  }
-</script>
+  <script type="text/javascript" src="js/fbSetup.js"></script>
+  <script src="js/exp2.js"></script>
+  <script src="js/exp1.js"></script>
 </body>
 </html>
