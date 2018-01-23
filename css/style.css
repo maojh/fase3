@@ -1,3 +1,7 @@
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
 .TITLE {
   font-family: Lato;
   font-size: 64px;
@@ -35,11 +39,51 @@
 
 .SmallTextHome {
   font-family: Lato;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
   line-height: small;
   letter-spacing: normal;
   color: #000000;
+}
+
+
+.Quote {
+  width: 545px;
+  height: 181px;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+/*NavBar*/
+
+.navbar {
+    overflow: hidden;
+    background-color: #fff;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: right;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    color:  #fdc502;
 }
