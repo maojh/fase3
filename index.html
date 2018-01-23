@@ -5,7 +5,7 @@
   <title>UBI3</title>
     <link rel="stylesheet" href="css/simple-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="/css/masonry.css">
 </head>
 <body>
 
@@ -49,7 +49,7 @@
             <div class="row">
               <div class="col-7">
                 <h3>
-                  Imagine that you had <span class="sub-gold">500€ guaranteed</span> each month, <br>
+                  Imagine that you had <span class="subGold">500€ guaranteed</span> each month, <br>
                   what would you do?
                 </h3>
               </div>
@@ -57,11 +57,11 @@
                 <!-- spacing -->
               </div>
               <div class="col-3">
-                <p>
+                <h5>
                   It doesn’t matter if you work or if you’re unemployed, if you are healthy or if you have any disabilities, you’re going to get it anyway.
                   <br>
                   How would you spend it?
-                </p>
+                </h5>
               </div>
             </div>
             <div class="row">
@@ -74,23 +74,55 @@
     <div id=3.0_Experiment2 class="container">
             <div class="row">
               <div class="col-4">
-                <h1>
-
-                </h1>
+                <h3>
+                  “If only I had <span class="subGold">12 hours more</span>…” <br>
+                  but what will you really do?
+                </h3>
               </div>
               <div class="col-4">
                 <!-- spacing -->
               </div>
               <div class="col-4">
-                <p>
+                <h5>
                   You could relax at home, go climbing, learn how to cook or simply work more than before. You could use it
                   just for one task or split it into different activities, it’s your choice.
-                </p>
+                </h5>
               </div>
             </div>
             <div class="row">
-              <div id="exp1">
-                <!-- P5 canvas from exp1.js-->
+              <div class="col-4">
+                <p>
+                  Imagine that you could save 12 working hours a week. How would you spend your time?
+                </p>
+                <h5>
+                  Write your answer here:
+                </h5>
+                <div class="input">
+                  <textarea name="name" rows="4" cols="" id="textField"></textarea>
+                  <br>
+                  <button type="button" id="submit" onclick="addPost()">Post</button>
+                  <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="masonWrapper">
+                  <div class="masonry">
+                    <!-- thank you w3bits.com for the css masonry idea -->
+                    <div class="item">
+                      In publishing and graphic design, lorem ipsum is a filler text or greeking.
+                    </div>
+                    <div class="item">
+                      It is commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text.
+                    </div>
+                    <div class="item">
+                      In publishing and graphic design, lorem ipsum is a filler text or greeking.
+                      Placeholder text allows designers to design the form of the content before the content itself has been produced.
+                    </div>
+                    <div class="item">
+                      Placeholder text allows designers to design the form of the content before the content itself has been produced.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
      </div>
