@@ -15,14 +15,7 @@
   color: var(--black);
 }
 
-.SubGold {
-  font-family: Lato;
-  font-size: 64px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.13;
-  letter-spacing: normal;
+.Gold {
   color: #fdc502;
 }
 
@@ -32,7 +25,7 @@
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.13;
+  line-height: 0.5;
   letter-spacing: normal;
   color: #000000;
 }
@@ -56,7 +49,7 @@
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  line-height: auto;
   letter-spacing: normal;
   text-align: left;
   color: #000000;
@@ -93,12 +86,13 @@
 /* Margin*/
 
 #UBItitle {   
-    margin-top: 33%;
+    margin-top: 28%;
 }
 
 #UBIsubtitle {
     
-    margin-top: 10%;
+    margin-top: auto;
+    line-height: 0.5;
 }
 
 #UBIsmall {
@@ -108,9 +102,10 @@
 
 #BIQuote {
     
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 #IMG4col {
-    width: 100%;
+    width: 110%;
+    margin-left: -30px;
 }
