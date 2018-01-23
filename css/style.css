@@ -9,6 +9,7 @@
   font-style: normal;
   font-stretch: normal;
   line-height: 1;
+  text-align: left;
   letter-spacing: normal;
   color: #000000;
   color: var(--black);
@@ -39,7 +40,7 @@
 
 .SmallTextHome {
   font-family: Lato;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -50,8 +51,6 @@
 
 
 .Quote {
-  width: 545px;
-  height: 181px;
   font-family: Lato;
   font-size: 24px;
   font-weight: bold;
@@ -86,4 +85,23 @@
 /* Change background on mouse-over */
 .navbar a:hover {
     color:  #fdc502;
+}
+
+
+
+
+/* Margin*/
+
+#UBItitle {   
+    margin-top: 32%;
+}
+
+#UBIsubtitle {
+    
+    margin-top: 10%;
+}
+
+#UBIsmall {
+    
+    margin-top: 10%;
 }
