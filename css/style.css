@@ -3,7 +3,7 @@
 }
 
 .TITLE {
-  font-family: Lato;
+  font-family: 'Lato';
   font-size: 64px;
   font-weight: bold;
   font-style: normal;
@@ -20,7 +20,7 @@
 }
 
 .SubBlack {
-  font-family: Lato;
+  font-family: 'Lato';
   font-size: 64px;
   font-weight: bold;
   font-style: normal;
@@ -32,7 +32,7 @@
 
 
 .SmallTextHome {
-  font-family: Lato;
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 13px;
   column-count: 2;
@@ -46,7 +46,7 @@
 
 
 .Quote {
-  font-family: Lato;
+  font-family: 'Lato';
   /*font-size: 24px;
   font-weight: bold;
   font-style: normal;
