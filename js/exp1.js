@@ -33,9 +33,11 @@ function preload() {
 
 
 function setup() {
-  var exp = createCanvas(windowWidth / 1.5, windowHeight )
-  var posCanvas = select("#exp1")
-  exp.parent(posCanvas)
+  // var exp = createCanvas(windowWidth / 1.5, windowHeight )
+  // var posCanvas = select("#exp1")
+  // exp.parent(posCanvas)
+  createCanvas(windowWidth / 1.5, windowHeight )
+
   smallCheck()
 
   unit = windowWidth / 100
