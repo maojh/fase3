@@ -33,7 +33,7 @@
 
 .SmallTextHome {
   font-family: Lato;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -108,4 +108,14 @@
 #IMG4col {
     width: 110%;
     margin-left: -30px;
+}
+
+#TiltTextRight {
+    
+    margin-left: 40px;
+}
+
+#TiltTextLeft {
+    
+    margin-left: -5%;
 }
