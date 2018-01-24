@@ -19,7 +19,7 @@ var blocked = false //block the interaction if token are all assigned
 var userScores = [0,0,0,0,0,0]
 
 //Firebase stuff
-var ref = database.ref('scores/')
+//scoresRef global various
 
 //Variables from dbSetup.js
 //scoresRef for pushing current user
@@ -27,7 +27,9 @@ var ref = database.ref('scores/')
 //totals is an array which contains the last values
 
 function setup() {
-  createCanvas(windowWidth / 1.5, windowHeight )
+  var exp = createCanvas(windowWidth / 1.5, windowHeight )
+  var posCanvas = select('#exp1')
+  posCanvas.parent(posCanvas)
 
   smallCheck()
 
@@ -136,7 +138,7 @@ function CurrToken() {
       } else {
         ellipse(this.x, this.y, this.dim, this.dim)
       }
-      //if not moving it-s not visible
+      //if not moving it's not visible
       pop()
     }
   }
