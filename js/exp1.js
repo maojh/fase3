@@ -12,7 +12,7 @@ var pipes
 var currToken
 var currMoving = false
 var initToken = {}
-var rest = 10 //total token available per user (per each loading)
+var rest = 1 //total token available per user (per each loading)
 var blocked = false //block the interaction if token are all assigned
 //this is the current token
 //to allow user interaction
