@@ -31,12 +31,11 @@ function preload() {
       fontB = loadFont('assets/Lato/Lato-Bold.ttf')
 }
 
-// var exp
+
 function setup() {
+  var exp = createCanvas(windowWidth / 1.5, windowHeight )
   var posCanvas = select("#exp1")
-  // exp = createCanvas(windowWidth / 1.5, windowHeight )
-  // exp.parent(posCanvas)
-  createCanvas(windowWidth / 1.5, windowHeight )
+  exp.parent(posCanvas)
   smallCheck()
 
   unit = windowWidth / 100
