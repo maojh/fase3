@@ -12,8 +12,8 @@ firebase.initializeApp(config);
 //Initialize DB
 var database = firebase.database()
 //Set scores registry
-var postRef = database.ref('posts/')
-
+postRef = database.ref('posts/')
+scoresRef = database.ref('scores/')
 //Get last totals, attaching event
 postRef.on('value', gotPosts, errData)
 

@@ -3,7 +3,7 @@
 }
 
 .TITLE {
-  font-family: Lato;
+  font-family: 'Lato';
   font-size: 64px;
   font-weight: bold;
   font-style: normal;
@@ -20,7 +20,7 @@
 }
 
 .SubBlack {
-  font-family: Lato;
+  font-family: 'Lato';
   font-size: 64px;
   font-weight: bold;
   font-style: normal;
@@ -32,26 +32,28 @@
 
 
 .SmallTextHome {
-  font-family: Lato;
-  font-size: 13px;
+  font-family: 'Lato';
   font-weight: 300;
+  font-size: 13px;
+  column-count: 2;
+  /*
   font-style: normal;
   font-stretch: normal;
   line-height: small;
-  letter-spacing: normal;
+  letter-spacing: normal;*/
   color: #000000;
 }
 
 
 .Quote {
-  font-family: Lato;
-  font-size: 24px;
+  font-family: 'Lato';
+  /*font-size: 24px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: auto;
   letter-spacing: normal;
-  text-align: left;
+  text-align: left;*/
   color: #000000;
 }
 
@@ -85,37 +87,36 @@
 
 /* Margin*/
 
-#UBItitle {   
+#UBItitle {
     margin-top: 28%;
 }
 
 #UBIsubtitle {
-    
+
     margin-top: auto;
     line-height: 0.5;
 }
 
 #UBIsmall {
-    
+
     margin-top: 5%;
 }
 
 #BIQuote {
-    
+
     margin-top: 20%;
 }
 
 #IMG4col {
-    width: 110%;
-    margin-left: -30px;
+    width: 100%;
 }
 
 #TiltTextRight {
-    
+
     margin-left: 40px;
 }
 
 #TiltTextLeft {
-    
+
     margin-left: -5%;
 }

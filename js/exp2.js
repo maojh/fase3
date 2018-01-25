@@ -1,7 +1,7 @@
 
 // Posts Masonry Prototype
 
-var text
+var input
 var submitButton
 var masonry
 var redo
@@ -10,28 +10,19 @@ var postBuffer = []
 var font, fontB
 var canv
 
-function preload() {
-      font = loadFont('assets/Karla/Karla-Regular.ttf')
-      fontB = loadFont('assets/Karla/Karla-Bold.ttf')
-}
-
-function setup() {
-  noCanvas()
-  text = select('#textField')
-  submitButton = select('#submit')
-  redo = select('#repost')
-  masonry = select('.masonry')
-
-}
+  input = document.getElementById("textField")
+  submitButton = document.getElementById("submit")
+  redo = document.getElementById("repost")
+  masonry = document.getElementById("masonry")
 
 function addPost() {
-  var content = text.value()
+  var content = input.value
   if (content.length>0 && content != "undefined" && content != "Write your post.") {
     var newPost = createElement('div',content)
     newPost.addClass('item')
     newPost.parent(masonry)
-    lastEntry = text.value()
-    text.value("")
+    lastEntry = input.value
+    input.value = ""
     postRef.push({"post":content})
 
     var postKeys = Object.keys(posts)
@@ -44,7 +35,7 @@ function rePost() {
   // HTML pag editing
   var oldPost = masonry.elt.lastChild
   oldPost.parentNode.removeChild(oldPost)
-  text.value(lastEntry)
+  input.value = lastEntry
   //DB editing
   //postref[postBuffer[postBuffer.lenght]].set("")
 }

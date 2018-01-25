@@ -1,50 +1,23 @@
+// Pilot token poll
+// Imagine that you had 500€ guaranteed each month,
+// what would you do?
 
-// Posts Masonry Prototype
 
-var text
-var submitButton
-var masonry
-var redo
-var lastEntry = "Write your post."
-var postBuffer = []
-var font, fontB
-var canv
+//Global variables from fbsetup
+// totals
+// scoresRef
 
-function preload() {
-      font = loadFont('assets/Karla/Karla-Regular.ttf')
-      fontB = loadFont('assets/Karla/Karla-Bold.ttf')
+function setup()
+{
+  // createCanvas(500,500)
+  var exp1 = createCanvas(500,500)
+  var pos = select('#exp1')
+  exp1.parent(pos)
+
+  console.log(pos.offsetWidth, pos.offsetHeight);
 }
 
-function setup() {
-  noCanvas()
-  text = select('#textField')
-  submitButton = select('#submit')
-  redo = select('#repost')
-  masonry = select('.masonry')
+function draw() {
+  background(0)
 
-}
-
-function addPost() {
-  var content = text.value()
-  if (content.length>0 && content != "undefined" && content != "Write your post.") {
-    var newPost = createElement('div',content)
-    newPost.addClass('item')
-    newPost.parent(masonry)
-    lastEntry = text.value()
-    text.value("")
-    postRef.push({"post":content})
-
-    var postKeys = Object.keys(posts)
-    var lastKey = postKeys[postKeys.length-1];
-    postBuffer.push(lastKey)
-  }
-}
-
-function rePost() {
-  // HTML pag editing
-  var oldPost = masonry.elt.lastChild
-  oldPost.parentNode.removeChild(oldPost)
-  text.value(lastEntry)
-  //DB editing
-  //postref[postBuffer[postBuffer.lenght]].set("")
 }
