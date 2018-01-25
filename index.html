@@ -9,8 +9,11 @@
 
   <script src="js/addons/p5.min.js"></script>
   <script src="js/addons/p5.dom.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
 </head>
 <body>
+
 
   <div class="navbar row">
     <a href="#BasicIncome">BASIC INCOME</a>
@@ -71,10 +74,6 @@
           </div>
         </div>
 
-
-
-
-
         <!-- first interactive experiment results -->
 
         <div id=2.0_Experiment1_Results class="container">
@@ -96,12 +95,13 @@
               </h5>
             </div>
           </div>
-          <div class="row">
-            <div id="exp1">
+          <div class="row" id="expRow">
+            <div id="exp1" class="col-12">
               <!-- P5 canvas from exp1.js-->
             </div>
           </div>
         </div>
+
         <!-- second interactive experiment -->
         <div id=3.0_Experiment2 class="container">
           <div class="row">
@@ -137,8 +137,8 @@
               </div>
             </div>
             <div class="col-8">
-              <div class="masonWrapper">
-                <div class="masonry">
+              <div id="masonWrapper">
+                <div id="masonry">
                   <!-- thank you w3bits.com for the css masonry idea -->
                   <div class="item">
                     In publishing and graphic design, lorem ipsum is a filler text or greeking.
@@ -183,16 +183,17 @@
     <a href="#SeeAlso">SEE ALSO</a>
   </div>
 
-    <script type="text/javascript">
-  //Variabili globali da passare fra gli scripts
-  var totals = [];
-  var prevPosts = {}
-  var postRef
-  var scoresRef
+  <script type="text/javascript">
+    //Variabili globali da passare fra gli scripts
+    var totals = [];
+    var prevPosts = {}
+    var postRef
+    var scoresRef
   </script>
-  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-  <script type="text/javascript" src="js/fbSetup.js"></script>
+  <!-- <script type="text/javascript" src="js/fbSetup.js"></script> -->
+  <script type="text/javascript" src="js/expP.js"></script>
   <script type="text/javascript" src="js/exp2.js"></script>
+
 
 </body>
 </html>

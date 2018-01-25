@@ -1,17 +1,17 @@
 
 
-.input, .masonWrapper {
+.input, #masonWrapper {
   /*margin-left: 10%;*/
   /*margin-top: 10%;*/
 }
 
-.masonWrapper {
+#masonWrapper {
     width: 100%;
     /*max-width: 80%;*/
     /*margin: 3em auto;*/
 }
 
-.masonry {
+#masonry {
   width: 100%;
     margin: 1.4em 0;
     padding: 0;
@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-width: 400px) {
-    .masonry {
+    #masonry {
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
@@ -42,7 +42,7 @@
 }
 
 @media only screen and (min-width: 700px) {
-    .masonry {
+    #masonry {
         -moz-column-count: 3;
         -webkit-column-count: 3;
         column-count: 3;
@@ -50,7 +50,7 @@
 }
 
 @media only screen and (min-width: 1100px) {
-    .masonry {
+    #masonry {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
@@ -58,7 +58,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-    .masonWrapper {
+    #masonWrapper {
         /*width: 1260px;*/
         max-width: 100%;
     }
