@@ -10,19 +10,10 @@ var postBuffer = []
 var font, fontB
 var canv
 
-function preload() {
-      font = loadFont('assets/Karla/Karla-Regular.ttf')
-      fontB = loadFont('assets/Karla/Karla-Bold.ttf')
-}
-
-function setup() {
-  noCanvas()
-  text = select('#textField')
-  submitButton = select('#submit')
-  redo = select('#repost')
-  masonry = select('.masonry')
-
-}
+  text = document.getElementById("textField")
+  submitButton = document.getElementById("submit")
+  redo = document.getElementById("repost")
+  masonry = document.getElementById("masonry")
 
 function addPost() {
   var content = text.value()
