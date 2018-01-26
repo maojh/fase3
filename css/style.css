@@ -1,6 +1,18 @@
 .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
+img {
+  width:100%;
+}
+
+/*Backgrounds*/
+#Exhibition {
+  background-color: lightGrey;
+}
+
+
+#exhibitionDate {
+}
 
 .TITLE {
   font-family: 'Lato';
