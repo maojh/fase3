@@ -27,7 +27,7 @@ var cont
 
 function setup() {
   cont = select('#expRow')
-  var exp1 = createCanvas(cont.width, cont.width * 0.75)
+  var exp1 = createCanvas(cont.width, cont.width * 0.50)
   pos = select('#exp1')
   exp1.parent(pos)
 

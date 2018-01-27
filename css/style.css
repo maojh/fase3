@@ -103,7 +103,7 @@
 
 #BIQuote {
 
-    margin-top: 18%;
+    margin-top: 15%;
 }
 
 #IMG4col {
@@ -119,4 +119,15 @@
 #TiltTextLeft {
 
     margin-left: -5%;
+}
+
+#SpaceMargin {
+
+    margin-top: 10%;
+}
+
+
+#exp1 {
+    
+    width: 100%;
 }
