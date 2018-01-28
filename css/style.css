@@ -1,27 +1,41 @@
 .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
+img {
+  width:100%;
+}
+
+/*Backgrounds*/
+#Exhibition {
+  /*background-color: lightGrey;*/
+}
+
+#exhibitionDate {
+  margin-top: 0%;
+  padding-top: 0%;
+  padding-left: 10%;
+}
 
 .TITLE {
   font-family: 'Lato';
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1;
+  line-height: 1.5;
   text-align: left;
   letter-spacing: normal;
   color: #000000;
   color: var(--black);
 }
 
-.Gold {
+.gold {
   color: #fdc502;
 }
 
-.SubBlack {
+.sub {
   font-family: 'Lato';
-  font-size: 64px;
+  font-size:  3.7rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -35,14 +49,18 @@
   font-family: 'Lato';
   font-weight: 300;
   font-size: 13px;
-  column-count: 2;
+  /*
   font-style: normal;
   font-stretch: normal;
   line-height: small;
   letter-spacing: normal;
+  */
   color: #000000;
 }
 
+.twoColText {
+  column-count: 2;
+}
 
 .Quote {
   font-family: 'Lato';
@@ -82,29 +100,21 @@
 }
 
 
-
-
-/* Margin*/
-
-#UBItitle {
-    margin-top: 33%;
+.section {
+  margin-top: 15%;
 }
 
+.fullscreen {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#UBItitle {}
+#BIQuote {}
 #UBIsubtitle {
-
-    margin-top: 8%;
-    line-height: 1.2;
+    line-height: 1.5;
 }
-
-#UBIsmall {
-
-    margin-top: 6%;
-}
-
-#BIQuote {
-
-    margin-top: 18%;
-}
+#UBIsmall {}
 
 #IMG4col {
     width: 100%;
@@ -112,11 +122,15 @@
 }
 
 #TiltTextRight {
-
     margin-left: 40px;
 }
 
 #TiltTextLeft {
+    /*margin-left: -5%;*/
+}
+#exp1 {
 
-    margin-left: -5%;
+}
+#textField {
+  width: 100%;
 }
