@@ -7,10 +7,13 @@ img {
 
 /*Backgrounds*/
 #Exhibition {
-  background-color: lightGrey;
+  /*background-color: lightGrey;*/
 }
 
 #exhibitionDate {
+  margin-top: 0%;
+  padding-top: 0%;
+  padding-left: 10%;
 }
 
 .TITLE {
@@ -101,6 +104,10 @@ img {
   margin-top: 15%;
 }
 
+.fullscreen {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
 #UBItitle {}
 #BIQuote {}

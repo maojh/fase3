@@ -53,7 +53,7 @@
     </div>
   </div>
 
-  <div id=2.0_Experiment1 class="section">
+  <div id="definition" class="section">
     <div class="container">
       <div class="row" id="BIQuote" >
         <div class="col-5"><img id="IMG4col" src="assets/UBI.jpg"></div>
@@ -82,7 +82,7 @@
 
   <!-- first interactive experiment results -->
 
-  <div id=2.0_Experiment1_Results class="section">
+  <div id="Experiment01" class="section">
     <div class="container">
       <div class="row">
         <div class="col-7">
@@ -114,7 +114,7 @@
   </div>
 
   <!-- second interactive experiment -->
-  <div id=3.0_Experiment2 class="section">
+  <div id="Experiment2" class="section">
     <div class="container">
       <div class="row">
         <div class="col-7">
@@ -155,7 +155,7 @@
               <button type="button" id="submit" onclick="addPost()">Post</button>
             </div>
           </div>
-            <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
+          <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
         </div>
         <div class="col-8">
           <div id="masonWrapper">
@@ -190,21 +190,36 @@
     </div>
   </div>
 
-  <div id=3.0_Experiment2_Results class="container">
-    <div class="row">
-      <!-- second interactive experiment results -->
+  <div id="Exhibition" class="section">
+    <div class="container">
+      <div class="row" id="BIQuote" >
+        <div class="col-7">
+          <img id="IMG7col" src="assets/exhibitionPic.jpg">
+          <button type="button" name="exhibNext" onclick="galleryNext()"> Next </button>
+          <button type="button" name="exhibPrev" onclick="galleryPrev()"> Prev</button>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4">
+              <p id="exhibitionDate">
+                We create also an installation with
+                this issue for the exhibition located
+                at Politecnico di Milano, Durando campus,
+                lasting one month.
+              </p>
+                <h1 id="">
+                  Exhibition, <br>
+                  February <br>
+                  2018
+                </h1>
+              <p id="exhibitionDate">
+                There every person can learn about
+                the history and nowaday situation of Basic Income
+                and share how they would invest the new amount of
+                money and time provided by an hypothetical Basic Income adoption.
+              </p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div id=Exhibition class="container">
-    <div class="row">
-      <!-- Info about our exhibition -->
-    </div>
-  </div>
-  <div id=SeeAlso class="container">
-    <div class="row">
-      <!-- link to our other works -->
-    </div>
-  </div>
 </div>
 
 <div class="navbar row">
@@ -216,11 +231,11 @@
 </div>
 
 <script type="text/javascript">
-//Variabili globali da passare fra gli scripts
-var totals = [];
-var prevPosts = {}
-var postRef
-var scoresRef
+  //Variabili globali da passare fra gli scripts
+  var totals = [];
+  var prevPosts = {}
+  var postRef
+  var scoresRef
 </script>
 <script type="text/javascript" src="js/fbSetup.js"></script>
 <script type="text/javascript" src="js/expP.js"></script>
