@@ -27,7 +27,7 @@ var cont
 
 function setup() {
   cont = select('#expRow')
-  var exp1 = createCanvas(cont.width, cont.width * 0.75)
+  var exp1 = createCanvas(cont.width, cont.width * 0.6)
   pos = select('#exp1')
   exp1.parent(pos)
 
@@ -105,7 +105,7 @@ function mouseDragged() {
 function mouseReleased() {
   //check if one pipe have been clicked, in case add one score to the right pipe
   var addOne = pipes.isHover()
-  console.log(addOne); //print the pipe selected for testing
+  //console.log(addOne); //print the pipe selected for testing
   currMoving = false
 }
 

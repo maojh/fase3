@@ -7,6 +7,8 @@
 
 #masonWrapper {
     width: 100%;
+    height: 25em;
+    overflow-y: scroll;
     /*max-width: 80%;*/
     /*margin: 3em auto;*/
 }
