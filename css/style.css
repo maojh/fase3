@@ -148,3 +148,7 @@ img {
   min-height: 15px;
   margin: 0% auto;
 }
+
+.dotSelected {
+  background-color: black;
+}
