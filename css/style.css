@@ -134,3 +134,17 @@ img {
 #textField {
   width: 100%;
 }
+
+.dots {
+  width: 20%;
+  margin: 0% auto;
+}
+
+.dot {
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  margin: 0% auto;
+}
