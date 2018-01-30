@@ -1,15 +1,17 @@
 //exhibition gallery multi button
 var exhibPic = document.getElementById("exhibPic")
-var buttons = Array.prototype.slice.call( document.getElementsByClassName("dots"))
 
+var buttons = document.getElementsByClassName("dot")
+var buttonsA = Array.prototype.slice.call( buttons )
 
-function selecteExhibPic(b) {
-  for(var i=0; i<buttons.length; i++) {
-    if(b==i) {
-      b.className = "dot dotSelected"
+function galleryNext(s) {
+  for(var b of buttons) {
+    if (b===s) {
+      s.className = "dot dotSelected"
     } else {
       b.className = "dot"
     }
-    exhibPic.src = "assets/exhib" + b + ".jpg"
+    var idpic = s.id.substring(1)
+    exhibPic.src = "assets/exhib" + idpic + ".jpg"
   }
 }
