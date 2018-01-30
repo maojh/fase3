@@ -153,3 +153,8 @@ button {
 button:hover {
   background-color: darker(#fdc502, 40%);
 }
+
+.postBtn {
+  position: absolute;
+  margin-top: 15%;
+}
