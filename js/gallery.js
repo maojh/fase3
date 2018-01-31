@@ -18,11 +18,14 @@ function galleryNext(s) {
 
 var imgA = document.getElementById("postA")
 var srcA = imgA.src
-var indexA = srcA.match(/post\d+/i)[0].substring(4,5)
+// var indexA = srcA.match(/post\d+/i)[0].substring(4,5)
+var indexA = srcA.match(/[A-Za-z0-9_-]+(\d)\.png/i)[1]
 var imgB = document.getElementById("postB")
 var srcB = imgB.src
-var indexB = srcB.match(/post\d+/i)[0].substring(4,5)
+// var indexB = srcB.match(/post\d+/i)[0].substring(4,5)
+var indexB = srcB.match(/[A-Za-z0-9_-]+(\d)\.png/i)[1]
 
+console.log("A ", indexA, ", B ", indexB );
 function postPrev() {
 
   if (indexA<5) {
