@@ -25,12 +25,12 @@
 
   <div class="main section">
     <div class="container">
-      <div class="row" id="UBItitle">
-        <a class="TITLE col-8" >BASIC INCOME</a>
-      </div>
-      <div class="row sub" id="UBIsubtitle">
-        <div>
-          A matter of <span class="gold">money</span>, <span class="gold">time</span><br>and <span class="gold">choices</span>.
+      <div class="row sub" id="UBItitle">
+        <div class="col-12">
+          <h1 class="TITLE" >BASIC INCOME</h1>
+          <h1 class="" id="UBIsubtitle">
+            A matter of <span class="gold">money</span>, <span class="gold">time</span> <span class="hidden-sm"></span> and <span class="gold">choices</span>.
+          </h1>
         </div>
       </div>
       <div class="row" id="UBIsmall">
@@ -40,11 +40,12 @@
             Scroll to participate in the experiment.
           </p>
         </div>
-        <div class="col-4"></div>
-        <div class="col-3">
-          <p class="SmallTextHome">
-            Or click here to learn more about UBI pilots around the world.
-          </p>
+        <div class="col-3"></div>
+        <div class="col-4">
+          <!-- <p class="SmallTextHome">
+            Or click here to learn more about <br>
+            UBI pilots around the world.
+          </p> -->
         </div>
       </div>
 
@@ -95,11 +96,9 @@
         </div>
         <div class="col-4">
           <p>
-            <strong>
               It doesn’t matter if you work or if you’re unemployed, if you are healthy or if you have any disabilities, you’re going to get it anyway.
               <br>
               How would you spend it?
-            </strong>
           </p>
         </div>
       </div>
@@ -248,13 +247,18 @@
                 <button class="postBtn" type="button" name="exhibNext" onclick="postPrev()"> < </button>
               </div>
               <div class="col-4">
-                <img id="postA" src="assets/posts/post1.png" alt="Results Posts">
+                <!-- On small screen this is the only visible, navigation directly clicking on this -->
+                <img id="postA" src="assets/posts/post1.png" alt="Results Posts" onclick="postPrev()">
               </div>
               <div class="col-4">
                 <img id="postB" src="assets/posts/post2.png" alt="Results Post">
               </div>
               <div class="col-1">
                 <button class="postBtn" type="button" name="exhibPrev" onclick="postNext()"> > </button>
+              </div>
+              <div class="col-12-sm" >
+                <button class="postBtnSmall" type="button" name="exhibNext" onclick="postPrev()"> < </button>
+                <button class="postBtnSmall" type="button" name="exhibPrev" onclick="postNext()"> > </button>
               </div>
             </div>
           </div>
@@ -266,6 +270,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <div id="seeAlso" class="section">
       <div class="container">
@@ -324,10 +329,31 @@
         </div>
       </div>
     </div>
-  </div>
 
-</div>
-
+    <div id="footer" class="section fullscreen">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-12-sm" id="logoPoli">
+            <img src="assets/logo_poli_white.png" alt="Politecnico di Milano">
+          </div>
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-3 col-12-sm" id="logoDensity">
+            <br>
+            <img src="assets/logo_density_white.png" alt="Density Design">
+          </div>
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-4 col-12-sm" id="team">
+            <ul>
+              <li><a href="#">Giorgio Falvo</a></li>
+              <li><a href="#">Irina Kasatkina</a></li>
+              <li><a href="https://www.otemate.it">Matteo Testa</a> </li>
+              <li><a href="https://www.matteosacchi.com">Matteo Sacchi</a></li>
+              <li><a href="#">Nicolas Attolico</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 <!-- <div class="navbar row">
   <a href="#BasicIncome">BASIC INCOME</a>
   <a href="#Exp1">EXPERIMENT 1</a>

@@ -7,6 +7,20 @@
 img {
   width:100%;
 }
+.gallery img {
+  width: 100%;
+}
+#footer {
+  overflow-x: hidden;
+}
+
+#logoDensity img {
+  width: 75%;
+  padding-left: 5%;
+}
+#logoPoli img {
+  width: %;
+}
 
 /*Backgrounds*/
 #Exhibition {
@@ -21,7 +35,12 @@ img {
   margin: 0% 10%;
   /*padding: 5%;*/
 }
-
+#footer {
+  background-color: black;
+}
+#exp1 canvas {
+  max-width: 100%;
+}
 
 /*TYPOGRAPHY*/
 /***********/
@@ -35,15 +54,30 @@ img {
 .TITLE {
   font-weight: bold;
   line-height: 1.5;
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: normal;
+  margin-bottom: 0%;
 }
 .sub {
-  font-size:  3.7rem;
+  font-size:  5.7rem;
   font-weight: bold;
-  line-height: 0.5;
+  line-height: 1.5;
   letter-spacing: normal;
 }
+
+#UBItitle {
+}
+#BIQuote {}
+#UBIsubtitle, #UBItitle {
+    line-height: 1.5;
+    position: relative;
+    margin-top: 0%;
+}
+#UBIsusbtitle {
+  font-size: 3rem;
+}
+#UBIsmall {}
+
 .SmallTextHome {
   font-weight: 300;
   font-size: 0.9rem;
@@ -55,7 +89,7 @@ img {
 
 .Quote {
   font-family: 'Lato';
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -71,12 +105,27 @@ img {
 
 .gold {
   color: #fdc502;
+  font-size: inherit;
 }
 
 .item {
   line-height: 1.3;
 }
+#footer {
+}
+ul {
+  color: white;
+  list-style: square outside;
 
+}
+#team li a{
+  text-decoration: none;
+  font-style: normal;
+  color: white;
+}
+#team li :hover {
+  font-style: italic;
+}
 
 /*NavBar*/
 
@@ -114,13 +163,6 @@ img {
   padding-bottom: 5%;
 }
 
-#UBItitle {}
-#BIQuote {}
-#UBIsubtitle {
-    line-height: 1.5;
-}
-#UBIsmall {}
-
 #IMG4col {
     width: 100%;
     margin-top: 14%;
@@ -138,7 +180,7 @@ img {
 
 .dots {
   width: 20%;
-  margin: 0% auto;
+  margin: 5% auto;
 }
 
 .dot {
@@ -174,5 +216,54 @@ button:hover {
   position: absolute;
   margin: 15% 0%;
   border-radius: 50%;
+}
+.postBtnSmall {
+  display: none;
+}
 
+
+@media only screen and (max-width:45em){
+  #UBItitle {
+    font-size: 60%;
+    line-height: 0.1em;
+  }
+  #UBIsubtitle, #UBItitle {
+      line-height: 1.5;
+      position: relative;
+      margin-top: 0%;
+  }
+  #UBIsubtitle{
+    font-size: 4em;
+  }
+  .navbar {
+    padding: 1% 2%;
+    font-size: 70%;
+    line-height: 0.1em;
+  }
+  .dots {
+    width: 30%;
+  }
+
+  #postA, #postB {
+    margin: 0% 0%;
+  }
+  #postB{
+    display: none;
+  }
+  .postBtn {
+    display: none;
+  }
+  /*.postBtnSmall {
+    display: visible;
+    position: relative;
+    margin: 15% 0%;
+    border-radius: 50%;
+  }*/
+  #team {
+    position: relative;
+    margin-left: -5%;
+  }
+  #logoPoli, #logoDensity img {
+    width: 40%;
+  }
 }
