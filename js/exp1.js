@@ -57,7 +57,7 @@ function setup() {
   pipes = new Pipes()
   token = new Token()
 
-  textSize(unit*1)
+  textSize(unit*1.5)
   textFont(font)
   noStroke()
 

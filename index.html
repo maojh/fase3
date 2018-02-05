@@ -13,286 +13,351 @@
 
 </head>
 <body>
-  <!-- first interactive experiment results -->
-
-  <div id="Experiment01" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-7">
-          <h3>
-            Imagine that you had <span class="gold">500€ guaranteed</span> each month, <br>
-            what would you do?
-          </h3>
-        </div>
-        <div class="col-1">
-          <!-- spacing -->
-        </div>
-        <div class="col-4">
-          <p>
-              It doesn’t matter if you work or if you’re unemployed, if you are healthy or if you have any disabilities, you’re going to get it anyway.
-              <br>
-              How would you spend it?
-          </p>
-        </div>
-      </div>
-      <div class="row"></div>
-      <div class="row" id="expRow">
-        <div id="exp1" class="col-12">
-          <!-- P5 canvas from exp1.js-->
-        </div>
-      </div>
-    </div>
+  <div class="navbar row">
+    <a href="#BasicIncome">BASIC INCOME</a>
+    <a href="#Exp1">EXPERIMENT 1</a>
+    <a href="#Exp2">EXPERIMENT 2</a>
+    <a href="#Exib">EXIBITION</a>
+    <a href="#SeeAlso">SEE ALSO</a>
   </div>
 
-  <!-- second interactive experiment -->
-  <div id="Experiment2" class="section">
+  <div class="main section">
     <div class="container">
-      <div class="row">
-        <div class="col-7">
-          <h3>
-            “If only I had <span class="gold">12 hours more</span>…” <br>
-            but what will you really do?
-          </h3>
-        </div>
-        <div class="col-1">
-          <!-- spacing -->
-        </div>
-        <div class="col-4">
-          <p>
-            You could relax at home, go climbing, learn how to cook or simply work more than before. You could use it just for one task or split it into different activities, it’s your choice.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <div class="row">
-            <div class="col-12">
-              <p>
-                Imagine that you could save 12 working hours a week. How would you spend your time?
-              </p>
-              <h6>
-                Write your answer here:
-              </h6>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <textarea name="name" rows="4" cols="" id="textField"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-8"></div>
-            <div class="col-4">
-              <button type="button" id="submit" onclick="addPost()">Post</button>
-            </div>
-          </div>
-          <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
-        </div>
-        <div class="col-8">
-          <div id="masonWrapper">
-            <div id="masonry">
-              <!-- thank you w3bits.com for the css masonry idea -->
-              <div class="item" id="7">
-                In publishing and graphic design, lorem ipsum is a filler text or greeking.
-              </div>
-              <div class="item" id="6">
-                It is commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text.
-              </div>
-              <div class="item" id="5">
-                In publishing and graphic design, lorem ipsum is a filler text or greeking.
-                Placeholder text allows designers to design the form of the content before the content itself has been produced.
-              </div>
-              <div class="item" id="4">
-                Placeholder text allows designers to design the form of the content before the content itself has been produced.
-              </div>
-              <div class="item" id="3">
-                In publishing and graphic design, lorem ipsum is a filler text or greeking.
-              </div>
-              <div class="item" id="2">
-                It is commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text.
-              </div>
-              <div class="item" id="1">
-                Happosai
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="Exhibition" class="section">
-    <div class="container">
-      <div class="row" id="BIQuote">
-        <div class="col-7">
-          <img id="exhibPic"  class="IMG7col" src="assets/exhib0.jpg">
-          <div class="dots">
-            <div class="dot dotSelected" id="b0" onclick="galleryNext(this)"></div>
-            <div class="dot" id="b1" onclick="galleryNext(this)"></div>
-            <div class="dot" id="b2" onclick="galleryNext(this)"></div>
-            <div class="dot" id="b3" onclick="galleryNext(this)"></div>
-          </div>
-          <!-- <button type="button" name="exhibNext" onclick="galleryNext()"> Next </button>
-          <button type="button" name="exhibPrev" onclick="galleryPrev()"> Prev</button> -->
-        </div>
-        <div class="col-1"></div>
-        <div class="col-4">
-          <p id="exhibitionDate" class="indent">
-            We create also an installation with
-            this issue for the exhibition located
-            at Politecnico di Milano, Durando campus,
-            lasting one month.
-          </p>
-          <h1 id="">
-            Exhibition, <br>
-            February <br>
-            2018
+      <div class="row sub" id="UBItitle">
+        <div class="col-12">
+          <h1 class="TITLE" >BASIC INCOME</h1>
+          <h1 class="" id="UBIsubtitle">
+            A matter of <span class="gold">money</span>, <span class="gold">time</span> <span class="hidden-sm"></span> and <span class="gold">choices</span>.
           </h1>
-          <p id="exhibitionDate" class="indent">
-            There every person can learn about
-            the history and nowaday situation of Basic Income
-            and share how they would invest the new amount of
-            money and time provided by an hypothetical Basic Income adoption.
+        </div>
+      </div>
+      <div class="row" id="UBIsmall">
+        <div class="col-5">
+          <p class="SmallTextHome">
+            Can you imagine all your future possibilities?<br>
+            Scroll to participate in the experiment.
           </p>
         </div>
+        <div class="col-3"></div>
+        <div class="col-4">
+          <!-- <p class="SmallTextHome">
+          Or click here to learn more about <br>
+          UBI pilots around the world.
+        </p> -->
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div id="definition" class="section">
+  <div class="container">
+    <div class="row" id="BIQuote" >
+      <div class="col-5"><img id="IMG4col" src="assets/UBI.jpg"></div>
+      <div class="col-1"></div>
+      <div class="col-7">
+        <h4 class="Quote">
+          A basic income is <br>a periodic cash payment unconditionally delivered to all on an individual basis, without means-test or work requirement.
+        </h4>
+        <h4>
+          (basicincome.org)
+        </h4>
+        <p class="SmallTextHome twoColText">
+          <br><br><br>
+          The idea of a minimum income appeared for the first time in some of the various humanistic utopias of the 1500 in europe.
+          Close to the historical period of the first industrial revolution, that of the minimum income, took shape as pragmatic
+          idea with the  proposals for "Capital grants provided at the age of majority" dating to thomas paine's agrarian justice of 1795.
+          The phrase "Social dividend" was commonly used as a synonym for basic income in the english-speaking world before 1986,
+          after which the phrase "Basic income" gained widespread currency.Since the first industrial revolution there was
+          the foresight of the exponential technological envelope. At first UBI was considered a Utopy but from 1960s some experimentations
+          had started only in the form of negative income tax; the first UBI experimentation properly took place in Canada in 1974.
+        </p>
       </div>
     </div>
   </div>
+</div>
 
-  <div id="results" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <h3>Titolo risultati gettoni</h3>
-          <p>
-            Here you can see the results from the happening.
-          </p>
-          <img src="assets/resultsPilot.png" alt="Results Pilot">
-        </div>
-        <div class="col-1"></div>
-        <div class="col-7">
-          <div class="row">
-            <h3>Titolo risultati post</h3>
+<!-- first interactive experiment results -->
+
+<div id="Experiment01" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-7">
+        <h3>
+          Imagine that you had <span class="gold">500€ guaranteed</span> each month, <br>
+          what would you do?
+        </h3>
+      </div>
+      <div class="col-1">
+        <!-- spacing -->
+      </div>
+      <div class="col-4">
+        <p>
+          It doesn’t matter if you work or if you’re unemployed, if you are healthy or if you have any disabilities, you’re going to get it anyway.
+          <br>
+          How would you spend it?
+        </p>
+      </div>
+    </div>
+    <div class="row"></div>
+    <div class="row" id="expRow">
+      <div id="exp1" class="col-12">
+        <!-- P5 canvas from exp1.js-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- second interactive experiment -->
+<div id="Experiment2" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-7">
+        <h3>
+          “If only I had <span class="gold">12 hours more</span>…” <br>
+          but what will you really do?
+        </h3>
+      </div>
+      <div class="col-1">
+        <!-- spacing -->
+      </div>
+      <div class="col-4">
+        <p>
+          You could relax at home, go climbing, learn how to cook or simply work more than before. You could use it just for one task or split it into different activities, it’s your choice.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-12">
+            <p>
+              Imagine that you could save 12 working hours a week. How would you spend your time?
+            </p>
+            <h6>
+              Write your answer here:
+            </h6>
           </div>
-          <div class="row">
-            <div class="gallery">
-              <div class="col-1">
-                <button class="postBtn" type="button" name="exhibNext" onclick="postPrev()"> < </button>
-              </div>
-              <div class="col-4">
-                <!-- On small screen this is the only visible, navigation directly clicking on this -->
-                <img id="postA" src="assets/posts/post1.png" alt="Results Posts" onclick="postPrev()">
-              </div>
-              <div class="col-4">
-                <img id="postB" src="assets/posts/post2.png" alt="Results Post">
-              </div>
-              <div class="col-1">
-                <button class="postBtn" type="button" name="exhibPrev" onclick="postNext()"> > </button>
-              </div>
-              <div class="col-12-sm" >
-                <button class="postBtnSmall" type="button" name="exhibNext" onclick="postPrev()"> < </button>
-                <button class="postBtnSmall" type="button" name="exhibPrev" onclick="postNext()"> > </button>
-              </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <textarea name="name" rows="4" cols="" id="textField"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8"></div>
+          <div class="col-4">
+            <button type="button" id="submit" onclick="addPost()">Post</button>
+          </div>
+        </div>
+        <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
+      </div>
+      <div class="col-8">
+        <div id="masonWrapper">
+          <div id="masonry">
+            <!-- thank you w3bits.com for the css masonry idea -->
+            <div class="item" id="7">
+              In publishing and graphic design, lorem ipsum is a filler text or greeking.
+            </div>
+            <div class="item" id="6">
+              It is commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text.
+            </div>
+            <div class="item" id="5">
+              In publishing and graphic design, lorem ipsum is a filler text or greeking.
+              Placeholder text allows designers to design the form of the content before the content itself has been produced.
+            </div>
+            <div class="item" id="4">
+              Placeholder text allows designers to design the form of the content before the content itself has been produced.
+            </div>
+            <div class="item" id="3">
+              In publishing and graphic design, lorem ipsum is a filler text or greeking.
+            </div>
+            <div class="item" id="2">
+              It is commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text.
+            </div>
+            <div class="item" id="1">
+              Happosai
             </div>
           </div>
-          <div class="row">
-            <p>
-              The ideas pinned today by the public, click to see more.
-            </p>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-    <div id="seeAlso" class="section">
-      <div class="container">
+<div id="Exhibition" class="section">
+  <div class="container">
+    <div class="row" id="BIQuote">
+      <div class="col-7">
+        <img id="exhibPic"  class="IMG7col" src="assets/exhib0.jpg">
+        <div class="dots">
+          <div class="dot dotSelected" id="b0" onclick="galleryNext(this)"></div>
+          <div class="dot" id="b1" onclick="galleryNext(this)"></div>
+          <div class="dot" id="b2" onclick="galleryNext(this)"></div>
+          <div class="dot" id="b3" onclick="galleryNext(this)"></div>
+        </div>
+        <!-- <button type="button" name="exhibNext" onclick="galleryNext()"> Next </button>
+        <button type="button" name="exhibPrev" onclick="galleryPrev()"> Prev</button> -->
+      </div>
+      <div class="col-1"></div>
+      <div class="col-4">
+        <p id="exhibitionDate" class="indent">
+          We create also an installation with
+          this issue for the exhibition located
+          at Politecnico di Milano, Durando campus,
+          lasting one month.
+        </p>
+        <h1 id="">
+          Exhibition, <br>
+          February <br>
+          2018
+        </h1>
+        <p id="exhibitionDate" class="indent">
+          There every person can learn about
+          the history and nowaday situation of Basic Income
+          and share how they would invest the new amount of
+          money and time provided by an hypothetical Basic Income adoption.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="results" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h3>Titolo risultati gettoni</h3>
+        <p>
+          Here you can see the results from the happening.
+        </p>
+        <img src="assets/resultsPilot.png" alt="Results Pilot">
+      </div>
+      <div class="col-1"></div>
+      <div class="col-7">
         <div class="row">
-          <div class="col-4">
-            <p id="exhibitionDate">
-              We create also an installation with
-              this issue for the exhibition located
-              at Politecnico di Milano, Durando campus,
-              lasting one month.
-            </p>
-            <h1 id="" class="indent">
-              Exhibition, <br>
-              February <br>
-              2018
-            </h1>
-            <p id="exhibitionDate">
-              There every person can learn about
-              the history and nowaday situation of Basic Income
-              and share how they would invest the new amount of
-              money and time provided by an hypothetical Basic Income adoption.
-            </p>
+          <h3>Titolo risultati post</h3>
+        </div>
+        <div class="row">
+          <div class="gallery">
+            <div class="col-1">
+              <button class="postBtn" type="button" name="exhibNext" onclick="postPrev()"> < </button>
+            </div>
+            <div class="col-4">
+              <!-- On small screen this is the only visible, navigation directly clicking on this -->
+              <img id="postA" src="assets/posts/post1.png" alt="Results Posts" onclick="postPrev()">
+            </div>
+            <div class="col-4">
+              <img id="postB" src="assets/posts/post2.png" alt="Results Post">
+            </div>
+            <div class="col-1">
+              <button class="postBtn" type="button" name="exhibPrev" onclick="postNext()"> > </button>
+            </div>
+            <div class="col-12-sm" >
+              <button class="postBtnSmall" type="button" name="exhibNext" onclick="postPrev()"> < </button>
+              <button class="postBtnSmall" type="button" name="exhibPrev" onclick="postNext()"> > </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p>
+            The ideas pinned today by the public, click to see more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="seeAlso" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <p id="exhibitionDate">
+          We create also an installation with
+          this issue for the exhibition located
+          at Politecnico di Milano, Durando campus,
+          lasting one month.
+        </p>
+        <h1 id="" class="indent">
+          Exhibition, <br>
+          February <br>
+          2018
+        </h1>
+        <p id="exhibitionDate">
+          There every person can learn about
+          the history and nowaday situation of Basic Income
+          and share how they would invest the new amount of
+          money and time provided by an hypothetical Basic Income adoption.
+        </p>
+      </div>
+      <div class="col-1"></div>
+      <div class="col-7">
+        <div class="row">
+          <div class="col-6">
+            <a href="https://maojh.github.io/fase1def/">
+              <img id="IMG7col" src="assets/exhib1.jpg">
+            </a>
           </div>
           <div class="col-1"></div>
-          <div class="col-7">
-            <div class="row">
-              <div class="col-6">
-                <a href="https://maojh.github.io/fase1def/">
-                  <img id="IMG7col" src="assets/exhib1.jpg">
-                </a>
-              </div>
-              <div class="col-1"></div>
-              <div class="col-5">
-                <h4>
-                  REPLACING <br>
-                  the future of work
-                </h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <a href="https://atlasfour.github.io/UBIquity/">
-                  <img id="IMG7col" src="assets/exhibitionPic.jpg">
-                </a>
-              </div>
-              <div class="col-1"></div>
-              <div class="col-5">
-                <h4>
-                  Ubiquity <br>
-                  UBI debates and actions <br>
-                  around the globe
-                </h4>
-              </div>
-            </div>
+          <div class="col-5">
+            <h4>
+              REPLACING <br>
+              the future of work
+            </h4>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="footer" class="section fullscreen">
-      <div class="container">
         <div class="row">
-          <div class="col-3 col-12-sm" id="logoPoli">
-            <img src="assets/logo_poli_white.png" alt="Politecnico di Milano">
+          <div class="col-6">
+            <a href="https://atlasfour.github.io/UBIquity/">
+              <img id="IMG7col" src="assets/exhibitionPic.jpg">
+            </a>
           </div>
-          <div class="col-1 hidden-sm"></div>
-          <div class="col-3 col-12-sm" id="logoDensity">
-            <br>
-            <img src="assets/logo_density_white.png" alt="Density Design">
-          </div>
-          <div class="col-1 hidden-sm"></div>
-          <div class="col-4 col-12-sm" id="team">
-            <ul>
-              <li><a href="#">Giorgio Falvo</a></li>
-              <li><a href="#">Irina Kasatkina</a></li>
-              <li><a href="https://www.otemate.it">Matteo Testa</a> </li>
-              <li><a href="https://www.matteosacchi.com">Matteo Sacchi</a></li>
-              <li><a href="#">Nicolas Attolico</a></li>
-            </ul>
+          <div class="col-1"></div>
+          <div class="col-5">
+            <h4>
+              Ubiquity <br>
+              UBI debates and actions <br>
+              around the globe
+            </h4>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div id="footer" class="section fullscreen">
+  <div class="container">
+    <div class="row">
+      <div class="col-3 col-12-sm" id="logoPoli">
+        <img src="assets/logo_poli_white.png" alt="Politecnico di Milano">
+      </div>
+      <div class="col-1 hidden-sm"></div>
+      <div class="col-3 col-12-sm" id="logoDensity">
+        <br>
+        <img src="assets/logo_density_white.png" alt="Density Design">
+      </div>
+      <div class="col-1 hidden-sm"></div>
+      <div class="col-4 col-12-sm" id="team">
+        <ul>
+          <li><a href="#">Giorgio Falvo</a></li>
+          <li><a href="#">Irina Kasatkina</a></li>
+          <li><a href="https://www.otemate.it">Matteo Testa</a> </li>
+          <li><a href="https://www.matteosacchi.com">Matteo Sacchi</a></li>
+          <li><a href="#">Nicolas Attolico</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- <div class="navbar row">
-  <a href="#BasicIncome">BASIC INCOME</a>
-  <a href="#Exp1">EXPERIMENT 1</a>
-  <a href="#Exp2">EXPERIMENT 2</a>
-  <a href="#Exib">EXIBITION</a>
-  <a href="#SeeAlso">SEE ALSO</a>
+<a href="#BasicIncome">BASIC INCOME</a>
+<a href="#Exp1">EXPERIMENT 1</a>
+<a href="#Exp2">EXPERIMENT 2</a>
+<a href="#Exib">EXIBITION</a>
+<a href="#SeeAlso">SEE ALSO</a>
 </div> -->
 
 <script type="text/javascript">

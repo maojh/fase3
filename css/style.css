@@ -25,7 +25,9 @@ img {
 /*Backgrounds*/
 #Exhibition {
 }
-
+#Experiment01 {
+    background-color: #eee;
+}
 #exhibitionDate {
   margin-top: 0%;
   padding-top: 0%;
