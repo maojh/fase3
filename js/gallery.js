@@ -25,7 +25,7 @@ var srcB = imgB.src
 // var indexB = srcB.match(/post\d+/i)[0].substring(4,5)
 var indexB = srcB.match(/[A-Za-z0-9_-]+(\d)\.png/i)[1]
 
-console.log("A ", indexA, ", B ", indexB );
+// console.log("A ", indexA, ", B ", indexB );
 function postPrev() {
 
   if (indexA<5) {
