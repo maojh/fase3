@@ -214,6 +214,8 @@ ul {
 button {
   background-color: #fdc502;
   border: none;
+  font-weight: bold;
+  font-size: 1.8em;
   padding: 2% 4%;
   margin: 1%;
   display: inline-block;
@@ -229,8 +231,9 @@ button:hover {
 
 .postBtn {
   position: absolute;
+  background: transparent;
   margin: 15% 0%;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .postBtnSmall {
   display: none;
