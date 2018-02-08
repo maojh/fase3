@@ -28,18 +28,21 @@ function gotPosts(data) {
 }
 function gotTotals(data) {
   //Global variable set in index.html
-  totalsKeys = Object.keys(data.val())
-  totalsobj = data.val()[totalsKeys[totalsKeys.length-1]];
+  if (data.val()!= null) {
+    totalsKeys = Object.keys(data.val())
+    totalsobj = data.val()[totalsKeys[totalsKeys.length-1]];
 
-  lastKeys = Object.keys(totalsobj)
-  console.log(lastKeys);
-  
-  for(var i=1;i<lastKeys.length;i++) {
-    console.log(totalsobj[key]);
+    lastKeys = Object.keys(totalsobj)
+
+    for(var i=0;i<lastKeys.length;i++) {
+      totals[i] = totalsobj[lastKeys[i]]
+      console.log(totals[i])
+    }
+  } else {
+    totals = [0,0,0,0,0,0]
+    totalsRef.push(totals)
+    console.log('totals is null');
   }
-
-  // console.log('totalsKeys ', totalsobj);
-
 }
 
 function errData(error) {
