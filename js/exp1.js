@@ -110,8 +110,9 @@ function mouseClicked() {
 }
 
 function mouseDragged() {
-  // token.moving = true
+  token.moving = true
   // pipes.addOne()
+
 }
 function mouseReleased() {
   if (token.moving) {
@@ -124,8 +125,8 @@ function mouseReleased() {
 function Token() {
   this.moving = false
   this.size = unit * 8
-  this.startPosY = 100+this.size+gap*3
-  this.startPosX = marginX1 + this.size
+  this.startPosY = 100+this.size+gap*2
+  this.startPosX = marginX1 + this.size/1.5
   this.posY = this.startPosX
   this.posX = this.startPosY
 
@@ -142,8 +143,14 @@ function Token() {
   this.show = function() {
     if(!blocked) {
       push()
+
+      var instH = this.startPosY-this.size/1.6
+      textSize(unit*1.2)
+      text("Drag and drop it easily!", marginX1, instH)
+      strokeCap(0)
+
       //Rest
-      fill('yellow')
+      fill('#fcd448')
       ellipse(this.startPosX, this.startPosY, this.size, this.size)
 
       if(this.moving) {
@@ -155,15 +162,15 @@ function Token() {
         this.posY = this.startPosY
       }
 
-      fill('gold')
+      fill('#fdc502')
       ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
       fill(0)
-      text(rest, this.posX-unit/2, this.posY+unit/2)
+      text(rest, this.startPosX-unit/2, this.startPosY+unit/2)
     } else {
       fill(0)
       textSize(unit)
-      text("Thank you!", marginX1+unit, this.posY)
-      text("That's the current data.", marginX1+unit, this.posY+unit*2)
+      text("Thank you!", marginX1+unit, this.startPosY)
+      text("That's the current data.", marginX1+unit, this.startPosY+unit*2)
     }
     pop()
   }
@@ -201,10 +208,11 @@ function Pipes() {
       var currPosX = gapPipes*i
       this.posXs[pipeInd] = currPosX+marginX2
       fill(255)
+      stroke(0)
       rect( currPosX, marginY2, gapPipes*2, height2)
       fill(0)
       rect( currPosX, marginY2+height2, gapPipes*2, unit)
-      fill('yellow')
+      fill('#fdc502')
       noStroke()
       for (var j = 0; j < this.currScores[pipeInd]; j++) {
         rect( gapPipes*i, marginY2+height2-unit*(1+j)*1.2, gapPipes*2, unit)
