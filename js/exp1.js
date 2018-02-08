@@ -36,7 +36,7 @@ function preload() {
 
 function setup() {
   cont = select('#expRow')
-  var exp1 = createCanvas(cont.width, cont.width * 0.7)
+  var exp1 = createCanvas(cont.width, cont.width * 0.5)
   pos = select('#exp1')
   exp1.parent(pos)
 
