@@ -1,4 +1,5 @@
 
+
 // EXPERIMENT 1
 
 //Pipes structure for building the interfacewith nested tokens objects
@@ -141,23 +142,23 @@ function Token() {
   this.show = function() {
     if(!blocked) {
       push()
-        //Rest
-        fill('yellow')
-        ellipse(this.startPosX, this.startPosY, this.size, this.size)
+      //Rest
+      fill('yellow')
+      ellipse(this.startPosX, this.startPosY, this.size, this.size)
 
-        if(this.moving) {
-          //Moving token
-          this.posX = mouseX
-          this.posY = mouseY
-        } else {
-          this.posX = this.startPosX
-          this.posY = this.startPosY
-        }
+      if(this.moving) {
+        //Moving token
+        this.posX = mouseX
+        this.posY = mouseY
+      } else {
+        this.posX = this.startPosX
+        this.posY = this.startPosY
+      }
 
-        fill('gold')
-        ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
-        fill(0)
-        text(rest, this.posX-unit/2, this.posY+unit/2)
+      fill('gold')
+      ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
+      fill(0)
+      text(rest, this.posX-unit/2, this.posY+unit/2)
       pop()
     }
   }
@@ -188,71 +189,72 @@ function Pipes() {
   this.show = function(){
     //temp userScores
     push()
-      translate(marginX2,0,0)
-      var pipeInd = 0
-      //17 is npipes*2+npipes-1
-      for (var i = 0; i < 17; i+=3) {
-        var currPosX = gapPipes*i
-        this.posXs[pipeInd] = currPosX+marginX2
-        fill(255)
-        rect( currPosX, marginY2, gapPipes*2, height2)
-        fill(0)
-        rect( currPosX, marginY2+height2, gapPipes*2, unit)
-        fill('yellow')
-        noStroke()
-        for (var j = 0; j < this.currScores[pipeInd]; j++) {
-          rect( gapPipes*i, marginY2+height2-unit*(1+j)*1.2, gapPipes*2, unit)
-          // console.log(i, j);
-        }
-        pipeInd++
+    translate(marginX2,0,0)
+    var pipeInd = 0
+    //17 is npipes*2+npipes-1
+    for (var i = 0; i < 17; i+=3) {
+      var currPosX = gapPipes*i
+      this.posXs[pipeInd] = currPosX+marginX2
+      fill(255)
+      rect( currPosX, marginY2, gapPipes*2, height2)
+      fill(0)
+      rect( currPosX, marginY2+height2, gapPipes*2, unit)
+      fill('yellow')
+      noStroke()
+      for (var j = 0; j < this.currScores[pipeInd]; j++) {
+        rect( gapPipes*i, marginY2+height2-unit*(1+j)*1.2, gapPipes*2, unit)
+        // console.log(i, j);
       }
+      pipeInd++
+    }
     pop()
     push()
-      fill(0)
-      textSize(unit*.6)
-      textFont(fontB)
-      text("Accomodation", this.posXs[0], marginY2+height2+unit*3 )
-      text("Health", this.posXs[1], marginY2+height2+unit*3 )
-      text("Caring", this.posXs[2], marginY2+height2+unit*2 )
-        text("responsibilities", this.posXs[2], marginY2+height2+unit*3 )
-      text("Entertainment", this.posXs[3], marginY2+height2+unit*3 )
-      text("Education", this.posXs[4], marginY2+height2+unit*3 )
-      text("Business", this.posXs[5], marginY2+height2+unit*3 )
+    fill(0)
+    textSize(unit*.6)
+    textFont(fontB)
+    text("Accomodation", this.posXs[0], marginY2+height2+unit*3 )
+    text("Health", this.posXs[1], marginY2+height2+unit*3 )
+    text("Caring", this.posXs[2], marginY2+height2+unit*2 )
+    text("responsibilities", this.posXs[2], marginY2+height2+unit*3 )
+    text("Entertainment", this.posXs[3], marginY2+height2+unit*3 )
+    text("Education", this.posXs[4], marginY2+height2+unit*3 )
+    text("Business", this.posXs[5], marginY2+height2+unit*3 )
 
-      textFont(font)
-      text("Maybe your own flat", this.posXs[0], marginY2+height2+unit*4 )
-      text("or new appartments", this.posXs[0], marginY2+height2+unit*5 )
-      text("in better place?", this.posXs[0], marginY2+height2+unit*6 )
+    textFont(font)
+    text("Maybe your own flat", this.posXs[0], marginY2+height2+unit*4 )
+    text("or new appartments", this.posXs[0], marginY2+height2+unit*5 )
+    text("in better place?", this.posXs[0], marginY2+height2+unit*6 )
 
-      text("Or it’s a time to", this.posXs[1], marginY2+height2+unit*4 )
-      text("take a care about", this.posXs[1], marginY2+height2+unit*5 )
-      text("yourself and start ", this.posXs[1], marginY2+height2+unit*6 )
-      text("going to gym?", this.posXs[1], marginY2+height2+unit*7 )
+    text("Or it’s a time to", this.posXs[1], marginY2+height2+unit*4 )
+    text("take a care about", this.posXs[1], marginY2+height2+unit*5 )
+    text("yourself and start ", this.posXs[1], marginY2+height2+unit*6 )
+    text("going to gym?", this.posXs[1], marginY2+height2+unit*7 )
 
-      text("Maybe you would to", this.posXs[2], marginY2+height2+unit*4 )
-      text("share your extra ", this.posXs[2], marginY2+height2+unit*5 )
-      text("money with your", this.posXs[2], marginY2+height2+unit*6 )
-      text("relatives or friends", this.posXs[2], marginY2+height2+unit*7 )
-      text("in need or charity?", this.posXs[2], marginY2+height2+unit*8 )
+    text("Maybe you would to", this.posXs[2], marginY2+height2+unit*4 )
+    text("share your extra ", this.posXs[2], marginY2+height2+unit*5 )
+    text("money with your", this.posXs[2], marginY2+height2+unit*6 )
+    text("relatives or friends", this.posXs[2], marginY2+height2+unit*7 )
+    text("in need or charity?", this.posXs[2], marginY2+height2+unit*8 )
 
-      text("Just fun! Travels, ", this.posXs[3], marginY2+height2+unit*4 )
-      text("cinema, more parties", this.posXs[3], marginY2+height2+unit*5 )
-      text("and holidays!", this.posXs[3], marginY2+height2+unit*6 )
+    text("Just fun! Travels, ", this.posXs[3], marginY2+height2+unit*4 )
+    text("cinema, more parties", this.posXs[3], marginY2+height2+unit*5 )
+    text("and holidays!", this.posXs[3], marginY2+height2+unit*6 )
 
-      text("Higher education,", this.posXs[4], marginY2+height2+unit*4 )
-      text("courses of art or", this.posXs[4], marginY2+height2+unit*5 )
-      text("languages. Maybe", this.posXs[4], marginY2+height2+unit*6 )
-      text("you could start", this.posXs[4], marginY2+height2+unit*7 )
-      text("your new way in", this.posXs[4], marginY2+height2+unit*8 )
-      text("another profession?", this.posXs[4], marginY2+height2+unit*9 )
+    text("Higher education,", this.posXs[4], marginY2+height2+unit*4 )
+    text("courses of art or", this.posXs[4], marginY2+height2+unit*5 )
+    text("languages. Maybe", this.posXs[4], marginY2+height2+unit*6 )
+    text("you could start", this.posXs[4], marginY2+height2+unit*7 )
+    text("your new way in", this.posXs[4], marginY2+height2+unit*8 )
+    text("another profession?", this.posXs[4], marginY2+height2+unit*9 )
 
-      text("Open your business,", this.posXs[5], marginY2+height2+unit*4 )
-      text("make an investment,", this.posXs[5], marginY2+height2+unit*5 )
-      text("start to be an ", this.posXs[5], marginY2+height2+unit*6 )
-      text("entrepreneur!", this.posXs[5], marginY2+height2+unit*7 )
+    text("Open your business,", this.posXs[5], marginY2+height2+unit*4 )
+    text("make an investment,", this.posXs[5], marginY2+height2+unit*5 )
+    text("start to be an ", this.posXs[5], marginY2+height2+unit*6 )
+    text("entrepreneur!", this.posXs[5], marginY2+height2+unit*7 )
     pop()
   }
   this.showTotals = function() {
+
     this.currScores = totals
     this.show()
   }
