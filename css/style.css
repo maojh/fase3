@@ -189,6 +189,8 @@ ul {
   padding: 6% 4%;
   font-weight: bold;
   width: 100%;
+  font-size: 1.2em;
+  border-radius: 5%;
   text-align: center;
   color: black;
 }
@@ -233,6 +235,7 @@ button:hover {
   position: absolute;
   background: transparent;
   margin: 15% 0%;
+  font-size: 1.5em;
   /* border-radius: 50%; */
 }
 .postBtnSmall {
