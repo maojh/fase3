@@ -84,7 +84,7 @@ img {
     font-size: 4rem;
     position: relative;
     margin-top: 0%;
-    
+
 }
 
 #UBIsmall {}
@@ -186,7 +186,11 @@ ul {
   width: 100%;
 }
 #submit {
-
+  padding: 6% 4%;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: black;
 }
 
 .dots {
@@ -217,10 +221,10 @@ button {
 }
 button:hover {
   background-color: #fdc502;
-  transform: scale(1.2);
+  transform: scale(1.05);
   font-weight: bold;
   font-size: 2em
-  transition: 0.2s ease-out;
+  transition: 0.2s ease;
 }
 
 .postBtn {
