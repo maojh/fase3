@@ -78,6 +78,15 @@ img {
 #UBIsusbtitle {
   font-size: 3rem;
 }
+
+#UBIsubtitleminlineheight{
+    line-height: 1.2;
+    font-size: 4rem;
+    position: relative;
+    margin-top: 0%;
+    
+}
+
 #UBIsmall {}
 
 .SmallTextHome {
