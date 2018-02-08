@@ -215,7 +215,7 @@ function Pipes() {
       fill('#fdc502')
       noStroke()
       for (var j = 0; j < this.currScores[pipeInd]; j++) {
-        rect( gapPipes*i, marginY2+height2-unit*(1+j)*1.2, gapPipes*2, unit)
+        rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
         // console.log(i, j);
       }
       pipeInd++
