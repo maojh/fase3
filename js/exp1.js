@@ -186,8 +186,8 @@ function Pipes() {
 
       if ((token.posY > marginY2) && (token.posY < marginY2+height2)) {
         if((token.posX > xpipe) && (token.posX < xpipe+gapPipes*2)) {
-          console.log('pipe', i);
-          console.log('rest', rest);
+          // console.log('pipe', i);
+          // console.log('rest', rest);
           userScores[i]++
           rest--
         }

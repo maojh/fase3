@@ -25,6 +25,12 @@ totalsRef.on('value', gotTotals, errData)
 function gotPosts(data) {
   //Global variable set in index.html
   posts = data.val();
+  postsKeys = Object.keys(posts)
+  for (var i = 0; i < postsKeys.length; i++) {
+    prevPosts.push(posts[postsKeys[i]].post);
+  }
+  console.log(prevPosts);
+  // console.log(postsobj[0].post);
 }
 function gotTotals(data) {
   //Global variable set in index.html
@@ -36,7 +42,7 @@ function gotTotals(data) {
 
     for(var i=0;i<lastKeys.length;i++) {
       totals[i] = totalsobj[lastKeys[i]]
-      console.log(totals[i])
+      // console.log(totals[i])
     }
   } else {
     totals = [0,0,0,0,0,0]

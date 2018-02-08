@@ -115,7 +115,7 @@
 </div>
 
 <!-- second interactive experiment -->
-<div id="Experiment02" class="section">
+<div id="Experiment02" class="section" onload="showPosts">
   <div class="container">
     <div class="row">
       <div class="col-7">
@@ -140,7 +140,7 @@
             <p>
               Imagine that you could save 12 working hours a week. How would you spend your time?
             </p>
-            <h6>
+            <h6 onclick="showPosts();">
               Write your answer here:
             </h6>
           </div>
@@ -153,7 +153,7 @@
         <div class="row">
           <div class="col-9"></div>
           <div class="col-3">
-            <button type="button" id="submit" onclick="addPost()">Post</button>
+            <button type="button" id="submit" onclick="addPost(); showPosts();">Post</button>
           </div>
         </div>
         <!-- <button type="button" id="repost" onclick="rePost()">Edit</button> -->
@@ -368,15 +368,16 @@
 
 <script type="text/javascript">
   //Variabili globali da passare fra gli scripts
-  var totals = [];
-  var prevPosts = {}
+  var totals = []
+  var prevPosts = []
+  var posts = []
   var postRef
   var scoresRef
 </script>
+<script type="text/javascript" src="js/fbSetup.js"></script>
 <script type="text/javascript" src="js/exp1.js"></script>
 <script type="text/javascript" src="js/exp2.js"></script>
 <script type="text/javascript" src="js/gallery.js"></script>
-<script type="text/javascript" src="js/fbSetup.js"></script>
 
 </body>
 </html>

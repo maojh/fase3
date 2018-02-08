@@ -50,6 +50,7 @@ function addPost() {
     var lastKey = postKeys[postKeys.length-1];
     postBuffer.unshift(lastKey)
   }
+  console.log(posts);
 }
 
 
@@ -62,6 +63,20 @@ function rePost() {
   //postref[postBuffer[postBuffer.lenght]].set("")
 }
 
+function showPosts() {
+  // console.log(prevPosts);
+
+  for(var content of prevPosts) {
+    var newPost = document.createElement("div")
+    newPost.innerText = content
+    newPost.className = "item"
+    newPost.id = (allPost.length).toString()
+    masonry.appendChild(newPost)
+  }
+
+}
+
+showPosts()
 
 // function addPost() {
 //   var content = input.value
