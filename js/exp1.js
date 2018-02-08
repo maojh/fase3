@@ -77,8 +77,8 @@ function draw() {
   }
 
   if(blocked) {
-    // sendUserScores()
     pipes.showTotals()
+    sendUserScores()
     noLoop()
   } else {
     // drawRest()
@@ -254,9 +254,12 @@ function Pipes() {
     pop()
   }
   this.showTotals = function() {
-
-    this.currScores = totals
+    console.log(this.currScores);
+    for (var i = 0; i < totals.length; i++) {
+      this.currScores[i] = totals[i] + userScores[i]
+    }
     this.show()
+    console.log(this.currScores);
   }
 
 }
@@ -271,6 +274,7 @@ function sendUserScores() {
   userScoresObj['pipe5'] = userScores[4]
   userScoresObj['pipe6'] = userScores[5]
   scoresRef.push(userScoresObj)
+  totalsRef.push(pipes.currScores)
 }
 
 //RESPONSIVE CANVAS
