@@ -7,8 +7,15 @@
 img {
   width:100%;
 }
+.gallery {
+  margin-top: 15%;
+}
 .gallery img {
   width: 100%;
+}
+
+#exhibPic {
+  margin-top: 4%;
 }
 #footer {
   overflow-x: hidden;
@@ -239,7 +246,7 @@ button:hover {
 .postBtn {
   position: absolute;
   background: transparent;
-  margin: 15% 0%;
+  margin: 10% 0%;
   font-size: 1.5em;
   /* border-radius: 50%; */
 }

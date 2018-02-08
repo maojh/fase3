@@ -40,7 +40,6 @@ function setup() {
   pos = select('#exp1')
   exp1.parent(pos)
 
-
   smallCheck()
 
   unit = windowWidth / 100
