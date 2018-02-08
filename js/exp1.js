@@ -48,7 +48,7 @@ function setup() {
   gap = unit * 1.9
   marginY = 25
   marginX1 = unit / 4
-  marginY1 = marginY * 4
+  marginY1 = marginY * 3
 
   marginY2 = marginY - unit*1.5
   marginX2 = width / 3
