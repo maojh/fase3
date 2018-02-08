@@ -76,8 +76,8 @@ function draw() {
   }
 
   if(blocked) {
-    pipes.showTotals()
     // sendUserScores()
+    pipes.showTotals()
     noLoop()
   } else {
     // drawRest()
@@ -212,16 +212,11 @@ function Pipes() {
       textSize(unit*.6)
       textFont(fontB)
       text("Accomodation", this.posXs[0], marginY2+height2+unit*3 )
-
       text("Health", this.posXs[1], marginY2+height2+unit*3 )
-
       text("Caring", this.posXs[2], marginY2+height2+unit*2 )
         text("responsibilities", this.posXs[2], marginY2+height2+unit*3 )
-
       text("Entertainment", this.posXs[3], marginY2+height2+unit*3 )
-
       text("Education", this.posXs[4], marginY2+height2+unit*3 )
-
       text("Business", this.posXs[5], marginY2+height2+unit*3 )
 
       textFont(font)
@@ -258,7 +253,6 @@ function Pipes() {
     pop()
   }
   this.showTotals = function() {
-    //testo valori totali? grazie della partecipazione?
     this.currScores = totals
     this.show()
   }
@@ -299,10 +293,6 @@ function windowResized() {
   gapPipes = size2 / 17
 
   // textSize(unit*10)
-
-  //Update the position of the current token
-  // var initVal = unit*10
-
   console.log('res', cont.width);
 }
 
