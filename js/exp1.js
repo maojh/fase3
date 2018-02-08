@@ -1,11 +1,12 @@
 
+
 // EXPERIMENT 1
 
 //Pipes structure for building the interfacewith nested tokens objects
 var pipes
 //Current token - user interaction
 var token
-var rest = 1 //total token available per user (per each loading)
+var rest = 10 //total token available per user (per each loading)
 var blocked = false //block the interaction if token are all assigned
 var userScores = [0,0,0,0,0,0]
 
@@ -30,11 +31,12 @@ var size2, height2
 
 function preload() {
   font = loadFont('assets/Lato/Lato-Regular.ttf')
+  fontB = loadFont('assets/Lato/Lato-Bold.ttf')
 }
 
 function setup() {
   cont = select('#expRow')
-  var exp1 = createCanvas(cont.width, cont.width * 0.6)
+  var exp1 = createCanvas(cont.width, cont.width * 0.7)
   pos = select('#exp1')
   exp1.parent(pos)
 
@@ -51,7 +53,8 @@ function setup() {
   marginY2 = marginY - unit*1.5
   marginX2 = width / 3
   size2 = width *.66
-  height2 = height * 0.75
+  // height2 = height * 0.75
+  height2 = height * 0.6
   gapPipes = size2 / 17
 
   pipes = new Pipes()
@@ -75,7 +78,7 @@ function draw() {
 
   if(blocked) {
     pipes.showTotals()
-    // sendUserScores()
+    sendUserScores()
     noLoop()
   } else {
     // drawRest()
@@ -84,11 +87,12 @@ function draw() {
   //Testo
   push()
   fill(15)
+  textSize(unit*1)
   text("Let's play. You have 10 chips.", marginX1, marginY)
-  text("This is your basic income.", marginX1, marginY+gap)
+  text("This is your basic income.", marginX1, marginY+gap*0.7)
   text("Each chip is worth 50 euros.", marginX1, marginY1)
-  text("Place it where you believe", marginX1, marginY1+gap)
-  text("you would spend your money!", marginX1, marginY1+gap*2)
+  text("Place it where you believe", marginX1, marginY1+gap*.7)
+  text("you would spend your money!", marginX1, marginY1+gap*2*.7)
   pop()
 
 
@@ -106,8 +110,9 @@ function mouseClicked() {
 }
 
 function mouseDragged() {
-  // token.moving = true
+  token.moving = true
   // pipes.addOne()
+
 }
 function mouseReleased() {
   if (token.moving) {
@@ -120,8 +125,8 @@ function mouseReleased() {
 function Token() {
   this.moving = false
   this.size = unit * 8
-  this.startPosY = 100+this.size+gap*3
-  this.startPosX = marginX1 + this.size
+  this.startPosY = 100+this.size+gap*2
+  this.startPosX = marginX1 + this.size/1.5
   this.posY = this.startPosX
   this.posX = this.startPosY
 
@@ -138,23 +143,36 @@ function Token() {
   this.show = function() {
     if(!blocked) {
       push()
-        //Rest
-        fill('yellow')
-        ellipse(this.startPosX, this.startPosY, this.size, this.size)
 
-        if(this.moving) {
-          //Moving token
-          this.posX = mouseX
-          this.posY = mouseY
-        } else {
-          this.posX = this.startPosX
-          this.posY = this.startPosY
-        }
+      var instH = this.startPosY-this.size/1.6
+      textSize(unit*1.2)
+      text("Drag and drop it easily!", marginX1, instH)
+      strokeCap(0)
 
-        fill('gold')
-        ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
-      pop()
+      //Rest
+      fill('#fcd448')
+      ellipse(this.startPosX, this.startPosY, this.size, this.size)
+
+      if(this.moving) {
+        //Moving token
+        this.posX = mouseX
+        this.posY = mouseY
+      } else {
+        this.posX = this.startPosX
+        this.posY = this.startPosY
+      }
+
+      fill('#fdc502')
+      ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
+      fill(0)
+      text(rest, this.startPosX-unit/2, this.startPosY+unit/2)
+    } else {
+      fill(0)
+      textSize(unit)
+      text("Thank you!", marginX1+unit, this.startPosY)
+      text("That's the current data.", marginX1+unit, this.startPosY+unit*2)
     }
+    pop()
   }
 }
 
@@ -183,29 +201,78 @@ function Pipes() {
   this.show = function(){
     //temp userScores
     push()
-      translate(marginX2,0,0)
-      var pipeInd = 0
-      for (var i = 0; i < 17; i+=3) {
-        var currPosX = gapPipes*i
-        this.posXs[pipeInd] = currPosX+marginX2
-        fill(255)
-        rect( currPosX, marginY2, gapPipes*2, height2)
-        fill(0)
-        rect( currPosX, marginY2+height2, gapPipes*2, unit)
-        fill('yellow')
-        noStroke()
-        for (var j = 0; j < this.currScores[pipeInd]; j++) {
-          rect( gapPipes*i, marginY2+height2-unit*(1+j)*1.2, gapPipes*2, unit)
-          // console.log(i, j);
-        }
-        pipeInd++
+    translate(marginX2,0,0)
+    var pipeInd = 0
+    //17 is npipes*2+npipes-1
+    for (var i = 0; i < 17; i+=3) {
+      var currPosX = gapPipes*i
+      this.posXs[pipeInd] = currPosX+marginX2
+      fill(255)
+      stroke(0)
+      rect( currPosX, marginY2, gapPipes*2, height2)
+      fill(0)
+      rect( currPosX, marginY2+height2, gapPipes*2, unit)
+      fill('#fdc502')
+      noStroke()
+      for (var j = 0; j < this.currScores[pipeInd]; j++) {
+        rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
+        // console.log(i, j);
       }
+      pipeInd++
+    }
+    pop()
+    push()
+    fill(0)
+    textSize(unit*.6)
+    textFont(fontB)
+    text("Accomodation", this.posXs[0], marginY2+height2+unit*3 )
+    text("Health", this.posXs[1], marginY2+height2+unit*3 )
+    text("Caring", this.posXs[2], marginY2+height2+unit*2 )
+    text("responsibilities", this.posXs[2], marginY2+height2+unit*3 )
+    text("Entertainment", this.posXs[3], marginY2+height2+unit*3 )
+    text("Education", this.posXs[4], marginY2+height2+unit*3 )
+    text("Business", this.posXs[5], marginY2+height2+unit*3 )
+
+    textFont(font)
+    text("Maybe your own flat", this.posXs[0], marginY2+height2+unit*4 )
+    text("or new appartments", this.posXs[0], marginY2+height2+unit*5 )
+    text("in better place?", this.posXs[0], marginY2+height2+unit*6 )
+
+    text("Or it’s a time to", this.posXs[1], marginY2+height2+unit*4 )
+    text("take a care about", this.posXs[1], marginY2+height2+unit*5 )
+    text("yourself and start ", this.posXs[1], marginY2+height2+unit*6 )
+    text("going to gym?", this.posXs[1], marginY2+height2+unit*7 )
+
+    text("Maybe you would to", this.posXs[2], marginY2+height2+unit*4 )
+    text("share your extra ", this.posXs[2], marginY2+height2+unit*5 )
+    text("money with your", this.posXs[2], marginY2+height2+unit*6 )
+    text("relatives or friends", this.posXs[2], marginY2+height2+unit*7 )
+    text("in need or charity?", this.posXs[2], marginY2+height2+unit*8 )
+
+    text("Just fun! Travels, ", this.posXs[3], marginY2+height2+unit*4 )
+    text("cinema, more parties", this.posXs[3], marginY2+height2+unit*5 )
+    text("and holidays!", this.posXs[3], marginY2+height2+unit*6 )
+
+    text("Higher education,", this.posXs[4], marginY2+height2+unit*4 )
+    text("courses of art or", this.posXs[4], marginY2+height2+unit*5 )
+    text("languages. Maybe", this.posXs[4], marginY2+height2+unit*6 )
+    text("you could start", this.posXs[4], marginY2+height2+unit*7 )
+    text("your new way in", this.posXs[4], marginY2+height2+unit*8 )
+    text("another profession?", this.posXs[4], marginY2+height2+unit*9 )
+
+    text("Open your business,", this.posXs[5], marginY2+height2+unit*4 )
+    text("make an investment,", this.posXs[5], marginY2+height2+unit*5 )
+    text("start to be an ", this.posXs[5], marginY2+height2+unit*6 )
+    text("entrepreneur!", this.posXs[5], marginY2+height2+unit*7 )
     pop()
   }
   this.showTotals = function() {
-    //testo valori totali? grazie della partecipazione?
-    this.currScores = totals
+    console.log(this.currScores);
+    for (var i = 0; i < totals.length; i++) {
+      this.currScores[i] = totals[i] + userScores[i]
+    }
     this.show()
+    console.log(this.currScores);
   }
 
 }
@@ -220,6 +287,7 @@ function sendUserScores() {
   userScoresObj['pipe5'] = userScores[4]
   userScoresObj['pipe6'] = userScores[5]
   scoresRef.push(userScoresObj)
+  totalsRef.push(pipes.currScores)
 }
 
 //RESPONSIVE CANVAS
@@ -244,10 +312,6 @@ function windowResized() {
   gapPipes = size2 / 17
 
   // textSize(unit*10)
-
-  //Update the position of the current token
-  // var initVal = unit*10
-
   console.log('res', cont.width);
 }
 

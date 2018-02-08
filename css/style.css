@@ -84,7 +84,7 @@ img {
     font-size: 4rem;
     position: relative;
     margin-top: 0%;
-    
+
 }
 
 #UBIsmall {}
@@ -186,7 +186,11 @@ ul {
   width: 100%;
 }
 #submit {
-
+  padding: 6% 4%;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: black;
 }
 
 .dots {
@@ -210,6 +214,8 @@ ul {
 button {
   background-color: #fdc502;
   border: none;
+  font-weight: bold;
+  font-size: 1.8em;
   padding: 2% 4%;
   margin: 1%;
   display: inline-block;
@@ -217,16 +223,17 @@ button {
 }
 button:hover {
   background-color: #fdc502;
-  transform: scale(1.2);
+  transform: scale(1.05);
   font-weight: bold;
   font-size: 2em
-  transition: 0.2s ease-out;
+  transition: 0.2s ease;
 }
 
 .postBtn {
   position: absolute;
+  background: transparent;
   margin: 15% 0%;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .postBtnSmall {
   display: none;
