@@ -5,7 +5,7 @@
 var pipes
 //Current token - user interaction
 var token
-var rest = 1 //total token available per user (per each loading)
+var rest = 2 //total token available per user (per each loading)
 var blocked = false //block the interaction if token are all assigned
 var userScores = [0,0,0,0,0,0]
 
@@ -30,11 +30,12 @@ var size2, height2
 
 function preload() {
   font = loadFont('assets/Lato/Lato-Regular.ttf')
+  fontB = loadFont('assets/Lato/Lato-Bold.ttf')
 }
 
 function setup() {
   cont = select('#expRow')
-  var exp1 = createCanvas(cont.width, cont.width * 0.6)
+  var exp1 = createCanvas(cont.width, cont.width * 0.7)
   pos = select('#exp1')
   exp1.parent(pos)
 
@@ -51,7 +52,8 @@ function setup() {
   marginY2 = marginY - unit*1.5
   marginX2 = width / 3
   size2 = width *.66
-  height2 = height * 0.75
+  // height2 = height * 0.75
+  height2 = height * 0.6
   gapPipes = size2 / 17
 
   pipes = new Pipes()
@@ -84,11 +86,12 @@ function draw() {
   //Testo
   push()
   fill(15)
+  textSize(unit*1)
   text("Let's play. You have 10 chips.", marginX1, marginY)
-  text("This is your basic income.", marginX1, marginY+gap)
+  text("This is your basic income.", marginX1, marginY+gap*0.7)
   text("Each chip is worth 50 euros.", marginX1, marginY1)
-  text("Place it where you believe", marginX1, marginY1+gap)
-  text("you would spend your money!", marginX1, marginY1+gap*2)
+  text("Place it where you believe", marginX1, marginY1+gap*.7)
+  text("you would spend your money!", marginX1, marginY1+gap*2*.7)
   pop()
 
 
@@ -153,6 +156,8 @@ function Token() {
 
         fill('gold')
         ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
+        fill(0)
+        text(rest, this.posX-unit/2, this.posY+unit/2)
       pop()
     }
   }
@@ -185,6 +190,7 @@ function Pipes() {
     push()
       translate(marginX2,0,0)
       var pipeInd = 0
+      //17 is npipes*2+npipes-1
       for (var i = 0; i < 17; i+=3) {
         var currPosX = gapPipes*i
         this.posXs[pipeInd] = currPosX+marginX2
@@ -200,6 +206,55 @@ function Pipes() {
         }
         pipeInd++
       }
+    pop()
+    push()
+      fill(0)
+      textSize(unit*.6)
+      textFont(fontB)
+      text("Accomodation", this.posXs[0], marginY2+height2+unit*3 )
+
+      text("Health", this.posXs[1], marginY2+height2+unit*3 )
+
+      text("Caring", this.posXs[2], marginY2+height2+unit*2 )
+        text("responsibilities", this.posXs[2], marginY2+height2+unit*3 )
+
+      text("Entertainment", this.posXs[3], marginY2+height2+unit*3 )
+
+      text("Education", this.posXs[4], marginY2+height2+unit*3 )
+
+      text("Business", this.posXs[5], marginY2+height2+unit*3 )
+
+      textFont(font)
+      text("Maybe your own flat", this.posXs[0], marginY2+height2+unit*4 )
+      text("or new appartments", this.posXs[0], marginY2+height2+unit*5 )
+      text("in better place?", this.posXs[0], marginY2+height2+unit*6 )
+
+      text("Or it’s a time to", this.posXs[1], marginY2+height2+unit*4 )
+      text("take a care about", this.posXs[1], marginY2+height2+unit*5 )
+      text("yourself and start ", this.posXs[1], marginY2+height2+unit*6 )
+      text("going to gym?", this.posXs[1], marginY2+height2+unit*7 )
+
+      text("Maybe you would to", this.posXs[2], marginY2+height2+unit*4 )
+      text("share your extra ", this.posXs[2], marginY2+height2+unit*5 )
+      text("money with your", this.posXs[2], marginY2+height2+unit*6 )
+      text("relatives or friends", this.posXs[2], marginY2+height2+unit*7 )
+      text("in need or charity?", this.posXs[2], marginY2+height2+unit*8 )
+
+      text("Just fun! Travels, ", this.posXs[3], marginY2+height2+unit*4 )
+      text("cinema, more parties", this.posXs[3], marginY2+height2+unit*5 )
+      text("and holidays!", this.posXs[3], marginY2+height2+unit*6 )
+
+      text("Higher education,", this.posXs[4], marginY2+height2+unit*4 )
+      text("courses of art or", this.posXs[4], marginY2+height2+unit*5 )
+      text("languages. Maybe", this.posXs[4], marginY2+height2+unit*6 )
+      text("you could start", this.posXs[4], marginY2+height2+unit*7 )
+      text("your new way in", this.posXs[4], marginY2+height2+unit*8 )
+      text("another profession?", this.posXs[4], marginY2+height2+unit*9 )
+
+      text("Open your business,", this.posXs[5], marginY2+height2+unit*4 )
+      text("make an investment,", this.posXs[5], marginY2+height2+unit*5 )
+      text("start to be an ", this.posXs[5], marginY2+height2+unit*6 )
+      text("entrepreneur!", this.posXs[5], marginY2+height2+unit*7 )
     pop()
   }
   this.showTotals = function() {
