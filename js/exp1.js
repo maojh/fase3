@@ -6,7 +6,7 @@
 var pipes
 //Current token - user interaction
 var token
-var rest = 2 //total token available per user (per each loading)
+var rest = 1 //total token available per user (per each loading)
 var blocked = false //block the interaction if token are all assigned
 var userScores = [0,0,0,0,0,0]
 
@@ -159,8 +159,13 @@ function Token() {
       ellipse(this.posX, this.posY, this.size*0.8, this.size*0.8)
       fill(0)
       text(rest, this.posX-unit/2, this.posY+unit/2)
-      pop()
+    } else {
+      fill(0)
+      textSize(unit)
+      text("Thank you!", marginX1+unit, this.posY)
+      text("That's the current data.", marginX1+unit, this.posY+unit*2)
     }
+    pop()
   }
 }
 
