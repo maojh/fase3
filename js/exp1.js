@@ -6,7 +6,7 @@
 var pipes
 //Current token - user interaction
 var token
-var rest = 10 //total token available per user (per each loading)
+var rest = 1 //total token available per user (per each loading)
 var blocked = false //block the interaction if token are all assigned
 var userScores = [0,0,0,0,0,0]
 
@@ -215,7 +215,7 @@ function Pipes() {
       noStroke()
       for (var j = 0; j < this.currScores[pipeInd]; j++) {
         if(blocked) {
-          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*0.5)
+          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*0.4)
         } else {
           rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
         }
