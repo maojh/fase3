@@ -76,8 +76,8 @@ function draw() {
   }
 
   if(blocked) {
-    pipes.showTotals()
     sendUserScores()
+    pipes.showTotals()
     noLoop()
   } else {
     // drawRest()
@@ -215,7 +215,7 @@ function Pipes() {
       noStroke()
       for (var j = 0; j < this.currScores[pipeInd]; j++) {
         if(blocked) {
-          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*0.1, gapPipes*1.95, unit*0.08)
+          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*0.13, gapPipes*1.95, unit*0.1)
         } else {
           rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
         }
