@@ -215,7 +215,7 @@ function Pipes() {
       noStroke()
       for (var j = 0; j < this.currScores[pipeInd]; j++) {
         if(blocked) {
-          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*0.13, gapPipes*1.95, unit*0.1)
+          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*0.3, gapPipes*1.95, unit*0.2)
         } else {
           rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
         }
