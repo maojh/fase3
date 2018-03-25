@@ -6,7 +6,7 @@
 var pipes
 //Current token - user interaction
 var token
-var rest = 1 //total token available per user (per each loading)
+var rest = 10 //total token available per user (per each loading)
 var blocked = false //block the interaction if token are all assigned
 var userScores = [0,0,0,0,0,0]
 
