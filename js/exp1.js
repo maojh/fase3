@@ -76,8 +76,8 @@ function draw() {
   }
 
   if(blocked) {
-    sendUserScores()
     pipes.showTotals()
+    sendUserScores()
     noLoop()
   } else {
     // drawRest()
