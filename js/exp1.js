@@ -214,7 +214,11 @@ function Pipes() {
       fill('#fdc502')
       noStroke()
       for (var j = 0; j < this.currScores[pipeInd]; j++) {
-        rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
+        if(blocked) {
+          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*0.5)
+        } else {
+          rect( gapPipes*i+1, marginY2+height2-unit*(1+j)*1.05, gapPipes*1.95, unit*1)
+        }
         // console.log(i, j);
       }
       pipeInd++
